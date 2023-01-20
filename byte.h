@@ -13,8 +13,8 @@ int get_row(int bit);
 int get_col(int bit);
 
 bool is_set_bit(int *bit_vector, int index);
-void set_bit(iint *bit_vector, int index);
+void set_bit(int *bit_vector, int index);
 bool inverse_bit(int *bit_vector, int index);
-bool reset_bit(iint *bit_vector, int index);
+bool reset_bit(int *bit_vector, int index);
 
 #endif  //  _BYTE_H_

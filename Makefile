@@ -1,6 +1,8 @@
 all:
-	gcc main.c -g
+	gcc main.c byte.c byte.h -g
 	./a.out
 
 clean:
 	rm *.gch *.out
+
+rebuild: clean all

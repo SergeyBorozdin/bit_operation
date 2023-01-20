@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "byte.h"
+
 #define MAX_DIGITS 8000
 
 void generation_digits(int numbers[]) {
@@ -10,14 +12,16 @@ void generation_digits(int numbers[]) {
   }
 }
 
-void print_duplicates(int numbers[]) {
-  bool reader[MAX_DIGITS];
+void print_duplicates(int *numbers) {
   int k = 0;
+  // 250 интов  это 205 * 32 бита = 8000 бит
+  int readed_bit_vector[250];
+
   for (int i = 0; i < numbers[MAX_DIGITS - 1]; i++) {
-    if (reader[numbers[i] - 1] == true) {
+    if (is_set_bit(readed_bit_vector, numbers[i] - 1)) {
       printf("\t%d - %d\n", ++k, numbers[i]);
     } else {
-      reader[numbers[i] - 1] = true;
+      set_bit(readed_bit_vector, numbers[i] - 1);
     }
   }
 }
