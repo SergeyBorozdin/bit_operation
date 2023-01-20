@@ -11,6 +11,26 @@ void func_byte(int(flag)) {
   }
 }
 
+/*
+    проверка бита
+*/
+bool is_set_bit(int number, int index) {}
+
+/*
+    установка бита в 1
+*/
+bool set_bit(int number, int index) {}
+
+/*
+    инверсия бита
+*/
+bool inverse_bit(int number, int index) {}
+
+/*
+    установкака бита в 0
+*/
+bool reset_bit(int number, int index) {}
+
 int main() {
   int STATE_1 = 1;
   int STATE_2 = 2;
